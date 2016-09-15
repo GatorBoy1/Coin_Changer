@@ -38,6 +38,10 @@ if cents_recieved == 7
 		coins[:quarter] = 1
 	end
 
+	if cents_recieved == 50
+		coins[:fifty_cent_piece] = 1
+	end
+
 
 	coins 
 end
