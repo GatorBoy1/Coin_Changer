@@ -59,8 +59,11 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:fifty_cent_piece => 1}, coin_changer(cents_received))
 	end
 
+def test_100_cents_equals_one_dollar_piece
+	 	cents_received = 100
+		assert_equal({:dollar_piece => 1}, coin_changer(cents_received))
 
-
+	end
 
 end
 	

@@ -42,6 +42,9 @@ if cents_recieved == 7
 		coins[:fifty_cent_piece] = 1
 	end
 
+if cents_recieved == 100
+		coins[:dollar_piece] = 1
+	end
 
 	coins 
 end
