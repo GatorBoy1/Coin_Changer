@@ -18,15 +18,19 @@ def coin_changer(cents_recieved)
 	end
 	
 if cents_recieved == 6
-		coins[:nickel=>1, :penny =>1] = 6
+		coins[:nickel=> 1, :penny => 1] = 6
 	end
 
 if cents_recieved == 7
-		coins[:nickel=>1, :penny =>2] = 7
+		coins[:nickel=> 1, :penny => 2] = 7
 	end
 
 	if cents_recieved == 10
 		coins[:dime] = 10
+	end
+
+	if cents_recieved == 14
+		coins[:dime => 1, :penny => 4] = 14
 	end
 
 
