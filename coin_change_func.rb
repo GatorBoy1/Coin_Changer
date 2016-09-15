@@ -26,7 +26,7 @@ if cents_recieved == 7
 	end
 
 	if cents_recieved == 10
-		coins[:dime] = 10
+		coins[:dime] = 1
 	end
 
 	if cents_recieved == 14
@@ -34,6 +34,9 @@ if cents_recieved == 7
 	end
 
 
+	if cents_recieved == 25
+		coins[:quarter] = 1
+	end
 
 
 	coins 

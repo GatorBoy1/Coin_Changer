@@ -41,13 +41,20 @@ class TestCoinChanger < Minitest::Test
 
 	def test_10_cents_equals_one_dime
 	 	cents_received = 10
-		assert_equal({:dime => 10}, coin_changer(cents_received))
+		assert_equal({:dime => 1}, coin_changer(cents_received))
 	end
 
 	def test_14_cents_equals_one_dime_and_four_pennies
 	 	cents_received = 14
 		assert_equal({{:dime => 1, :penny => 4} =>14}, coin_changer(cents_received))
 	end
+
+	def test_25_cents_equals_one_dime_and_four_pennies
+	 	cents_received = 25
+		assert_equal({:quarter => 1}, coin_changer(cents_received))
+	end
+
+
 
 
 end
