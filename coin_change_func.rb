@@ -46,6 +46,9 @@ if cents_recieved == 100
 		coins[:dollar_piece] = 1
 	end
 
+if cents_recieved == 493
+		coins[:dollar_piece => 4,:fifty_cent_piece => 1, :quarter => 1, :dime => 1, :nickel=> 1, :penny => 3] = 493
+	end
 	coins 
 end
 

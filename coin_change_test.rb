@@ -59,9 +59,14 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:fifty_cent_piece => 1}, coin_changer(cents_received))
 	end
 
-def test_100_cents_equals_one_dollar_piece
+	def test_100_cents_equals_one_dollar_piece
 	 	cents_received = 100
 		assert_equal({:dollar_piece => 1}, coin_changer(cents_received))
+	end
+
+	def test_493_cents_equals_one_nickel_and_two_pennies
+	 	cents_received = 493
+		assert_equal({{:dollar_piece => 4, :fifty_cent_piece => 1, :quarter => 1, :dime => 1, :nickel => 1, :penny => 3 } =>493}, coin_changer(cents_received))
 
 	end
 
