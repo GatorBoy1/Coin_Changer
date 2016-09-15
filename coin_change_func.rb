@@ -21,6 +21,11 @@ if cents_recieved == 6
 		coins[:nickel=>1, :penny =>1] = 6
 	end
 
+if cents_recieved == 7
+		coins[:nickel=>1, :penny =>2] = 7
+	end
+
+
 
 
 	coins 

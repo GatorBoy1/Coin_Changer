@@ -20,19 +20,28 @@ class TestCoinChanger < Minitest::Test
 
 
 	def test_two_cent_equals_two_pennies
-	 	cents_received =2
+	 	cents_received = 2
 		assert_equal({:penny => 2}, coin_changer(cents_received))
 	end
 
 	def test_5_cents_equals_one_nickel
-	 	cents_received =5
+	 	cents_received = 5
 		assert_equal({:nickel => 1}, coin_changer(cents_received))
 	end
 
-	def test__cents_equals_one_nickel_and_one_penny
-	 	cents_received =6
+	def test__6_cents_equals_one_nickel_and_one_penny
+	 	cents_received = 6
 		assert_equal({{:nickel => 1, :penny => 1} =>6}, coin_changer(cents_received))
 	end
+
+	def test__7_cents_equals_one_nickel_and_two_pennies
+	 	cents_received = 7
+		assert_equal({{:nickel => 1, :penny => 2} =>7}, coin_changer(cents_received))
+	end
+
+
+
+
 
 
 end
